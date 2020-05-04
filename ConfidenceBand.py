@@ -3,6 +3,7 @@ import pandas as pd
 import pandas as pd
 from numpy import nan
 from matplotlib import dates as mpl_dates
+import mplcursors
 
 df = pd.read_excel('C://Users/admin/Desktop/Sentiment/pro_model.xlsx')
 
@@ -33,6 +34,7 @@ df.plot(kind='line',x='Date',y='Predicted_Upper',color='white', ax=ax)
 plt.xticks(rotation=45)
 plt.legend(['Predicted','Actuals'])
 plt.xlabel('Date')
+mplcursors.cursor(hover=True)
 # time to see our work!
 plt.show()
 
